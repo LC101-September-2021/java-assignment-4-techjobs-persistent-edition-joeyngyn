@@ -15,7 +15,7 @@ public class Employer extends AbstractEntity {
     @Size(max = 50, message = "Location entry is too long. Try a shorter term.")
     private String location;
 
-    @JoinColumn
+    @JoinColumn(name = "employer_id")
     @OneToMany
     private List<Job> jobs = new ArrayList<>();
 
